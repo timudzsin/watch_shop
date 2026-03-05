@@ -17,9 +17,12 @@ return new class extends Migration
             // Ha azt szeretném, hogy bármennyi képe lehessen egy karórának,
             // csinálhatnék egy watch_images(watch_id, image_url) táblát,
             // ami rekordonként egy kép.
-            $table->string('image1_url')->nullable();
-            $table->string('image2_url')->nullable();
-            $table->string('image3_url')->nullable();
+            //$table->string('image1_url')->nullable();
+            //$table->string('image2_url')->nullable();
+            //$table->string('image3_url')->nullable();
+
+            // Az egyszerűség kedvéért mégis csak 1 kép van.
+            $table->string('image_url')->nullable();
             $table->string('brand');
             $table->string('name');
             $table->integer('price');
