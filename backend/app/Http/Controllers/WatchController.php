@@ -13,7 +13,7 @@ class WatchController extends Controller
      */
     public function index()
     {
-        //
+        return Watch::all();
     }
 
     /**
@@ -27,9 +27,9 @@ class WatchController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Watch $watch)
+    public function show(string $id)
     {
-        //
+        return Watch::find($id);
     }
 
     /**

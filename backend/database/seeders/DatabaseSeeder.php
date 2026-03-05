@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             WatchSeeder::class,
             OrderSeeder::class,
-            OrderItemSeeder::class,
+            OrderItemSeeder::class, 
         ]);
     }
 }
