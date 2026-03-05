@@ -11,7 +11,9 @@ class Watch extends Model
     use HasFactory;
 
     protected $fillable = [
-        'image_url',
+        'image1_url',
+        'image2_url',
+        'image3_url',
         'brand',
         'name',
         'price',
