@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { WatchesContext } from "../contexts/WatchesContext";
 import Watch from "./Watch";
+import "./Watches.css";
 
 export default function Watches() {
 	const { watches } = useContext(WatchesContext);

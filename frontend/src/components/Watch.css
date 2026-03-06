@@ -1,4 +1,27 @@
 .Watch {
-    background-color: hsl(0, 0%, 10%);
-    border-radius: 20px;
+	background-color: hsl(0, 0%, 20%);
+	border-radius: 20px;
+}
+
+.Watch > img {
+	background-color: hsl(0, 0%, 100%);
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 20px;
+}
+
+.Watch-brand {
+	color: hsl(0, 0%, 70%);
+	text-align: center;
+}
+
+.Watch-name {
+	color: hsl(0, 0%, 95%);
+	text-align: center;
+}
+
+.Watch-price {
+	color: hsl(0, 0%, 70%);
+	text-align: center;
 }
