@@ -1,10 +1,14 @@
 .Watch {
 	background-color: hsl(0, 0%, 20%);
+	border-bottom: 1.5px solid hsl(0, 0%, 45%);
 	border-radius: 20px;
 }
 
 .Watch > img {
-	background-color: hsl(0, 0%, 100%);
+	background-color: hsl(0, 0%, 0%);
+	border: 1.5px solid hsl(0, 0%, 30%);
+	border-top: 1.5px solid hsl(0, 0%, 60%);
+	border-bottom: 1.5px solid hsl(0, 0%, 45%);
 	width: 100%;
 	height: auto;
 	display: block;
