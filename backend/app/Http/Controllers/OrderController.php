@@ -22,8 +22,12 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $order = new Order();
-        
+        $order = Order::create([
+            'user_id' => $request->user_id,
+            'status' => $request->status,
+        ]);
+
+        return response()->json($order);
     }
 
     /**
