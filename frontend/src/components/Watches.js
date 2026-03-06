@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { WatchesContext } from "../contexts/WatchesContext";
+import Watch from "./Watch";
 
 export default function Watches() {
-  return (
-    <div>Watches</div>
-  )
+	const { watches } = useContext(WatchesContext);
+
+	return (
+		<div className="Watches">
+			{watches.map((i, index) => {
+				return <Watch key={index} watch={i}></Watch>;
+			})}
+		</div>
+	);
 }

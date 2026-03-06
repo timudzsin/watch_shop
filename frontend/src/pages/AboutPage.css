@@ -1,17 +1,22 @@
 .AboutPage-h5 {
 	font-size: 50px;
 	text-align: right;
-	padding: 20px;
+	margin: 30px;
 	font-weight: 700;
 }
 
 .AboutPage-img {
-	max-width: 100vw;
+	width: 100%;
+    height: auto;
+    display: block;
 	border-radius: 20px;
 }
 
 .AboutPage-p {
+	background-color: hsla(0, 0%, 10%);
     padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
     font-size: 18px;
 
 }
