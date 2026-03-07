@@ -1,12 +1,12 @@
 .Navbar {
 	background-color: hsla(0, 0%, 10%, 0.5);
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(10px);
 	/* For some browsers, also include this */
-	-webkit-backdrop-filter: blur(5px);
-	box-shadow: 0px 2px 10px black;
-	border: 1.5px solid hsl(0, 0%, 30%);
-	border-top: 1.5px solid hsl(0, 0%, 60%);
-	border-bottom: 1.5px solid hsl(0, 0%, 45%);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0px 0px 10px black;
+	border: 1.5px solid hsl(0, 0%, 30%, 0.5);
+	border-top: 1.5px solid hsl(0, 0%, 60%, 0.5);
+	border-bottom: 1.5px solid hsl(0, 0%, 45%, 0.5);
 	width: fit-content;
 	border-radius: 72px;
 	padding: 2px;
