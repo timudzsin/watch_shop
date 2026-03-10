@@ -8,8 +8,8 @@ export default function Watches() {
 
 	return (
 		<div className="Watches">
-			{watches.map((i, index) => {
-				return <Watch key={index} watch={i}></Watch>;
+			{watches.map((element, index) => {
+				return <Watch key={index} watch={element}></Watch>;
 			})}
 		</div>
 	);
