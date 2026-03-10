@@ -14,20 +14,20 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'marcell',
-            'password' => 'marcell',
+            'name' => 'marci',
+            'password' => 'marci',
         ]);
         User::create([
-            'name' => 'adél',
-            'password' => 'adél',
+            'name' => 'bence',
+            'password' => 'bence',
         ]);
         User::create([
-            'name' => 'edda',
-            'password' => 'edda',
+            'name' => 'timu',
+            'password' => 'timu',
         ]);
         User::create([
-            'name' => 'péter',
-            'password' => 'péter',
+            'name' => 'zackey',
+            'password' => 'zackey',
         ]);
     }
 }

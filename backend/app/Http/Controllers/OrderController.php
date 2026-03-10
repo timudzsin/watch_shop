@@ -22,14 +22,25 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        $user = $request->user();
+
+        // ha nincs hitelesített felhasználó (nincs vagy rossz token)
+        if (!$user) {
+            return response()->json([
+                'message' => 'Nem található felhasználó ehhez a tokenhez'
+            ], 401);
+        }
+
         $order = Order::create([
-            'user_id' => $request->user_id,
+            'user_id' => $user->id,
             'status' => $request->status,
         ]);
 
-        return response()->json($order);
+        return response()->json([
+            'message' => 'Rendelés sikeresen létrehozva',
+            'order' => $order
+        ]);
     }
-
     /**
      * Display the specified resource.
      */

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Http\Request;
@@ -17,8 +17,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanc
 
 // összes karóra lekérése
 Route::get('/watches', [WatchController::class, 'index']);
-// id. karóra lekérdezése
-Route::get('/watches/{id}', [WatchController::class, 'show']);
 // rendelés létrehozása
-Route::post('/orders', [OrderController::class, 'store']);
+Route::post('/orders', [OrderController::class, 'store'])->middleware('auth:sanctum');
+// id. karóra lekérdezése
+//Route::get('/watches/{id}', [WatchController::class, 'show']);
+
 
