@@ -35,6 +35,7 @@ export default function User() {
 			.post("http://localhost:8000/api/logout", {}, { headers: { Authorization: `Bearer ${token}` } })
 			.then(() => {
 				localStorage.removeItem("token"); // token törlése
+                console.log(user.name + " kilépett.")
 				navigate("/login", { replace: true }); // vissza loginra
 			})
 			.catch((error) => console.error("Hiba a kijelentkezéskor:", error));

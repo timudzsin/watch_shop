@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoginPage.css";
+import LoginForm from "../components/LoginForm";
 
 export default function LoginPage() {
 	const navigate = useNavigate();
@@ -13,5 +15,9 @@ export default function LoginPage() {
 		}
 	}, []); // csak egyszer, a komponens mountolásakor lefut
 
-	return <div className="LoginPage">LoginPage</div>;
+	return (
+		<div className="LoginPage">
+			<LoginForm></LoginForm>
+		</div>
+	);
 }
