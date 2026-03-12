@@ -1,0 +1,33 @@
+.User {
+	background-color: hsl(0, 0%, 10%);
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	width: 320px;
+	padding: 20px;
+}
+
+.User > h2 {
+    width: 250px;
+    min-height: 30px;
+    text-align: center;
+    font-size: 28px;
+	color: hsl(0, 0%, 95%);
+}
+
+.User > button {
+	background-color: hsl(0, 90%, 30%);
+	border: 1.5px solid hsl(0, 90%, 30%);
+	border-top: 1.5px solid hsl(0, 90%, 60%);
+	border-radius: 10px;
+    padding: 5px;
+    width: 250px;
+    min-height: 30px;
+    font-size: 30px;
+    font-weight: 700;
+	color: hsl(0, 0%, 95%);
+}

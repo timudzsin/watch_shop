@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
-	const navigate = useNavigateigate();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const token = localStorage.getItem("token");

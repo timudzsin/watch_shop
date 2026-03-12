@@ -42,6 +42,8 @@ class AuthController extends Controller
         ], 201);
     }
 
+
+
     public function login(Request $request)
     {
         // Validáció
@@ -78,7 +80,23 @@ class AuthController extends Controller
         ], 200);
     }
 
-    
+
+
+    public function me(Request $request)
+    {
+        $user = $request->user(); // a middleware már ellenőrizte a tokent
+        if (!$user) {
+            return response()->json([
+                'message' => 'Nem található felhasználó ehhez a tokenhez'
+            ], 404);
+        }
+
+        return response()->json([
+            'user' => $user,
+        ]);
+    }
+
+
 
     public function logout(Request $request)
     {
