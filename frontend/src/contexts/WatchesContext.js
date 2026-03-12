@@ -7,12 +7,13 @@ export const WatchesProvider = ({ children }) => {
 	const [watches, setWatches] = useState([]);
 
 	async function getWatches() {
-		try {
-			const response = await axios.get("http://localhost:8000/api/watches");
-			setWatches(response.data);
-		} catch (error) {
-			console.error("Hiba a karórák lekérésekor:", error);
-		}
+        axios.get("http://localhost:8000/api/watches")
+        .then(function (response) {
+            setWatches(response.data);
+        })
+        .catch(function (error){
+            console.log(error);
+        })
 	}
 
 	return (

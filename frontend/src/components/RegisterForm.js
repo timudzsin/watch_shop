@@ -1,24 +1,43 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./RegisterForm.css";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterForm() {
 	const [name, setName] = useState("");
 	const [password, setPassword] = useState("");
 
-	const handleSubmit = async (e) => {
+    const navigate = useNavigate();
+
+	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		try {
-			const response = await axios.post("http://localhost:8000/api/register", {
+		axios
+			.post("http://localhost:8000/api/register", {
 				name,
 				password,
-			});
+			})
+			.then(function (response) {
+                console.log(response);
 
-			console.log("Success:", response.data);
-		} catch (error) {
-			console.error("Error:", error);
-		}
+                // token lementése és beállítása
+				const token =
+					response?.data?.token || response?.data?.access_token || response?.data?.data?.token || null;
+				if (token) {
+					localStorage.setItem("token", token);
+					console.log("Token mentve:", token);
+				}
+
+				// mezők törlése
+				setName("");
+				setPassword("");
+
+                // átnavigálás a /user oldalra
+                navigate("/user");
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
 	};
 
 	return (
